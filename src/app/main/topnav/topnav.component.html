@@ -1,0 +1,23 @@
+<mat-toolbar>
+  <mat-toolbar-row>
+    <strong><span>SECURECERTS</span></strong>
+    <span class="spacer"></span>
+
+    <div class="container">
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item>Creator</button>
+        <button mat-menu-item>University</button>
+        <button mat-menu-item>Student</button>
+      </mat-menu>
+      <mat-nav-list class="list">
+        <a mat-list-item routerLink="/">Home</a>
+        <a mat-list-item [matMenuTriggerFor]="menu"> Login </a>
+        <a mat-list-item routerLink="/">About</a>
+        <a mat-list-item routerLink="/">Team</a>
+        <a mat-list-item routerLink="/">Contact</a>
+      </mat-nav-list>
+
+    </div>
+
+  </mat-toolbar-row>
+</mat-toolbar>
