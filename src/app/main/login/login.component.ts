@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators, FormGroup } from '@angular/forms';
 import { LoginService } from 'src/app/shared/services/login.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -10,11 +11,24 @@ import { LoginService } from 'src/app/shared/services/login.service';
 export class LoginComponent implements OnInit {
 
   public loginForm: FormGroup;
+  public type: string;
 
   constructor(
     private formBuilder: FormBuilder,
-    private _loginService: LoginService
-  ) { }
+    private _loginService: LoginService,
+    private activatedRoute: ActivatedRoute
+  ) {
+    this.activatedRoute.queryParams.subscribe(params => {
+      if (params.type == "university") {
+        this.type = "University";
+      } else if (params.type == "creator") {
+        this.type = "Creator";
+      }
+      else {
+        this.type = "Student";
+      }
+    })
+  }
 
   ngOnInit() {
     this.buildForm();
@@ -27,6 +41,6 @@ export class LoginComponent implements OnInit {
   }
 
   loginClicked() {
-    this._loginService.login(this.loginForm.value);
+    // this._loginService.login(this.loginForm.value);
   }
 }

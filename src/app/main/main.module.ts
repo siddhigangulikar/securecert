@@ -3,7 +3,7 @@ import { CommonModule } from '@angular/common';
 import { MainComponent } from './main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TopnavComponent } from './topnav/topnav.component';
-import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule } from '@angular/material';
+import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule, MatButtonModule } from '@angular/material';
 
 const routes: Routes = [
   {
@@ -35,6 +35,7 @@ const routes: Routes = [
     MatToolbarModule,
     MatMenuModule,
     MatListModule,
+    MatButtonModule
 
 
   ]

@@ -9,16 +9,15 @@
 
       <mat-nav-list class="list">
         <a mat-list-item routerLink="/">Home</a>
-        <a mat-list-item routerLink="login"> Login </a>
         <a mat-list-item routerLink="/">About</a>
         <a mat-list-item routerLink="/">Team</a>
         <a mat-list-item routerLink="/">Contact</a>
 
-        <button mat-button [matMenuTriggerFor]="menu">Login</button>
+        <button mat-button color="primary" [matMenuTriggerFor]="menu">Login</button>
         <mat-menu #menu="matMenu">
-          <button mat-menu-item>University</button>
-          <button mat-menu-item>Creator</button>
-          <button mat-menu-item>Student</button>
+          <button mat-menu-item routerLink="/login" [queryParams]="{type: 'university'}">University</button>
+          <button mat-menu-item routerLink="/login" [queryParams]="{type: 'creator'}">Creator</button>
+          <button mat-menu-item routerLink="/login" [queryParams]="{type: 'student'}">Student</button>
         </mat-menu>
 
       </mat-nav-list>
