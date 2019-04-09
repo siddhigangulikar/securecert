@@ -12,6 +12,16 @@ export class LoginService {
     private _http: HttpClient
   ) { }
 
+  login(body: any) {
+    this._http.post(environment.apiUrl + "/login", {
+      username: body.username,
+      password: body.password
+    }).subscribe(res => {
+      console.log(res);
+
+    })
+  }
+
 
 }
 
