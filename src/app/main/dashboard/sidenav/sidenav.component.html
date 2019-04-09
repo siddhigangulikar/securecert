@@ -1,0 +1,8 @@
+<mat-nav-list>
+  <a mat-list-item >Dashboard</a>
+  <a mat-list-item *ngIf="type==0">Create Certificate</a>
+  <a mat-list-item *ngIf="type==1">Enroll Student</a>
+  <a mat-list-item *ngIf="type==1">View Enrolled Student</a>
+  <a mat-list-item *ngIf="type==2">View Certificate</a>
+  <a mat-list-item *ngIf="type==2">Edit Profile Details</a>
+</mat-nav-list>

@@ -41,6 +41,16 @@ export class LoginComponent implements OnInit {
   }
 
   loginClicked() {
-    this._loginService.login(this.loginForm.value);
+    let data = 0;
+    if(this.type=="Creator")
+    {
+      data=1;
+    }
+    else if(this.type=="Student")
+    {
+      data=2;
+    }
+    this._loginService.login(this.loginForm.value,data);
+
   }
 }
