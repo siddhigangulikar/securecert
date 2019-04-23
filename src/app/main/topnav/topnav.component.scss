@@ -1,17 +1,9 @@
-.title{
-    font-size: 50px;
-}  
-  
-  spacer {
-    flex: 1 1 auto;
-  }
-
-  .container{
-      font-size: 20px;
-      margin-left: 1000px;
-  }
+.toolbar{
+    display: flex;
+    justify-content: space-between;
 
   .list{
-      display: flex;
-      text-align: center;
-  }
+    display: flex;
+    text-align: center;
+    }
+}

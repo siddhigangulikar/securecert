@@ -17,8 +17,9 @@ export class LoginService {
 
   login(body: any, type: number) {
     localStorage.setItem("type", type + "");
+   
     this.router.navigate(["dashboard"]);
-
+    
     // this._http.post(environment.apiUrl + "/login", {
     //   username: body.username,
     //   password: body.password

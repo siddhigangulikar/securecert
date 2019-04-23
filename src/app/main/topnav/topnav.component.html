@@ -1,10 +1,5 @@
-<mat-toolbar>
-  <mat-toolbar-row>
-    <section class="title is-info is-fullheight is-bold">
-      <h1 class="title">SECURECERTS</h1>
-    </section>
-    <span class="spacer"></span>
-
+<mat-toolbar class="toolbar">
+    <span>SECURECERTS</span>
     <div class="container">
 
       <mat-nav-list class="list">
@@ -19,10 +14,6 @@
           <button mat-menu-item routerLink="/login" [queryParams]="{type: 'creator'}">Creator</button>
           <button mat-menu-item routerLink="/login" [queryParams]="{type: 'student'}">Student</button>
         </mat-menu>
-
       </mat-nav-list>
-
     </div>
-
-  </mat-toolbar-row>
 </mat-toolbar>

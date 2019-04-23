@@ -1,8 +1,7 @@
 <mat-nav-list>
-  <a mat-list-item >Dashboard</a>
-  <a mat-list-item *ngIf="type==0">Create Certificate</a>
-  <a mat-list-item *ngIf="type==1">Enroll Student</a>
-  <a mat-list-item *ngIf="type==1">View Enrolled Student</a>
-  <a mat-list-item *ngIf="type==2">View Certificate</a>
-  <a mat-list-item *ngIf="type==2">Edit Profile Details</a>
+  <a mat-list-item routerLink="/dashboard">Dashboard</a>
+  <a mat-list-item *ngIf="type==0" routerLink="create-certificate">Create Certificate</a>
+  <a mat-list-item *ngIf="type==1" routerLink="enroll-student">Enroll Student</a>
+  <a mat-list-item *ngIf="type==1" routerLink="view-enrolled-student">View Enrolled Student</a>
+  <a mat-list-item *ngIf="type==2" routerLink="view-certificate">View Certificate</a>
 </mat-nav-list>
