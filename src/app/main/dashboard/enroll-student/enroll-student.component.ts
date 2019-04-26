@@ -10,7 +10,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class EnrollStudentComponent implements OnInit {
 
   /*declared variables and validations*/
-  public queryForm: FormGroup;
+  public recordForm: FormGroup;
   public cert_PRno: any;
   public firstName: any;
   public secondName: any;
@@ -26,12 +26,18 @@ export class EnrollStudentComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-    this.queryForm = this._fb.group({
-
-    })
+    this.recordForm = this._fb.group({
+      cert_PRno: null,
+      cert_CName: null,
+      cert_Seatno: null,
+      cert_examination: null,
+      cert_YOP: null,
+      cert_sububject: null
+    });
   }
   enrollStudent() {
     console.log("KKK");
+    console.log(this.firstName);
    /* this.httpClient.post(`http://localhost:3000/`, this.queryForm.value).subscribe((data: any) => {
       console.log(data);
       this.queryForm.reset();
