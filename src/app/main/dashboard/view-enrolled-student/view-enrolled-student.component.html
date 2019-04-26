@@ -1,9 +1,12 @@
 <div class="form-group">
-  <label>Search For Student</label><br>
+  <label>Search For A Specific Student</label><br>
   <h5 style="color:red;margin-bottom:2%" id="error_query"> Please enter a valid PR number.</h5>
 
-  Enter PR number: <input id="createName" class="form-control" type="text" placeholder="Ex: 101" ng-model="prNumber">
-  <button (click)="findStudent()">Query Specific</button>
+  Please Enter A PR number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno">
+  
+<button (click)="findStudent()">Query Specific</button>
+
+
 </div>
 
 <table class="table">
@@ -19,7 +22,7 @@
     <th>Mobile Number</th>
   </tr>
   <tr ng-repeat="cert in all_cert">
-    <td>{{cert.prNo}}</td>
+    <td>{{cert.PRno}}</td>
     <td>{{cert.firstName}}</td>
     <td>{{cert.secondName}}</td>
     <td>{{cert.surname}}</td>

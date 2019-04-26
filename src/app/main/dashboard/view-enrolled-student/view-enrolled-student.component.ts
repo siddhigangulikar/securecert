@@ -7,7 +7,7 @@ import {HttpClient} from '@angular/common/http';
   styleUrls: ['./view-enrolled-student.component.scss']
 })
 export class ViewEnrolledStudentComponent implements OnInit {
-
+  public cert_PRno:any;
   public studentName:any;
   public collegeName:any;
   public seatNumber:any;

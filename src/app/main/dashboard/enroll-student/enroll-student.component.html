@@ -1,32 +1,30 @@
 <!----main section starts(student registration)-->
 <div class="form-group">
-  <div class="main">
-
-    <div class="title">
-      <span>ENROLLMENT FORM</span></div>
-
-    <div class="contents">
-      PR-Number: <input class="form-control" type="text" placeholder="Ex: 101" ng-model="cert_PRno"><br><br><br>
-
-      First-name: <input class="form-control" type="text" placeholder="First-name" ng-model="firstName">
-      Second-Name: <input class="form-control" type="text" placeholder="Middle name" ng-model="secondName">
-      Surname: <input class="form-control" type="text" placeholder="Surname" ng-model="Surname"><br><br><br>
-
-      College-Name: <input class="form-control" type="text" placeholder="Ex:PCCE" ng-model="collegeName">
-      Branch: <input class="form-control" type="text" placeholder="Ex:Information Technology" ng-model="Branch">
-      Year of admission: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" ng-model="YOP"><br><br><br>
-
-      Email-Id: <input class="form-control" type="text" placeholder="abc@gmail.com" ng-model="emailId"><br><br><br>
-
-      Mobile-Number: <input class="form-control" type="number" placeholder="987654321" ng-model="mobileNumber"><br><br>
 
 
-      <div class="buttons">
-        <a mat-stroked-button routerLink=".">SUBMIT</a>
-        <a mat-stroked-button routerLink=".">RESET</a>
 
-      </div>
+  <label>ENROLLMENT FORM</label>
+
+  <div class="contents">
+    PR-Number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
+
+    First-name: <input class="form-control" type="text" placeholder="First-name" formControlName="firstName">
+    Second-Name: <input class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
+    Surname: <input class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
+
+    College-Name: <input class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
+    Branch: <input class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
+    Year of admission: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" formControlName="YOP"><br><br><br>
+
+    Email-Id: <input class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
+
+    Mobile-Number: <input class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
+
+    <button (click)="enrollStudent()">Submit Records</button>
+    <button (click)="cleardata()">clear data</button>
 
 
-    </div>
+
+
   </div>
+</div>
