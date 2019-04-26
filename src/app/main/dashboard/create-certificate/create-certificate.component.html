@@ -1,34 +1,16 @@
-<div class="createc">
-  <div class="title1">
-    <p><strong> CREATE CERTIFICATE</strong></p><br>
-  </div>
 
-  <div class="conainer">
+  <div class="form-group">
 
-    <div class="form-group">
-      First Name: <input class="form-control" type="text" placeholder="First Name" ng-model="firstName"><br><br>
-      Second Name: <input class="form-control" type="text" placeholder="Second Name" ng-model="secondName"><br><br>
-      PR Number: <input class="form-control" type="text" placeholder="PR number" ng-model="CERT_PRno"><br><br>
-      College Name: <input class="form-control" type="text" placeholder="Ex:PCCE" ng-model="collegeName"><br><br>
-      Seat Number: <input class="form-control" type="text" placeholder="Seat Number" ng-model="seatNumber"><br><br>
-      Year Of Passing: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" ng-model="YOP"><br><br>
-      Examination: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" ng-model="Examination"><br><br>
 
-      <div class="title2">
-        <p><strong> MARKS OBTAINED</strong></p><br>
-      </div>
+    <label>Add Certificate</label>
+    <h5 style="color:green;margin-bottom:2%" id="success_create"></h5>
+    <br>
+    Enter PR no.: <input class="form-control" type="text" placeholder="Ex: 101"formControlName="cert_PRno"><br><br>
+    Enter name of college: <input class="form-control" type="text" placeholder="Ex: PCCE" formControlName="cert_CName"><br><br>
+    Enter Seat no.: <input id="createName" class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno"><br><br>
+    Enter Examination: <input id="createName" class="form-control" type="text" placeholder="Ex: may/june" formControlName="cert_examination"><br><br>
+    Enter Year of passing: <input class="form-control" type="text" placeholder="Ex: 2019" formControlName="cert_YOP"><br><br>
+    Enter Sub: <input class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject"><br><br>
+    <button (click)="recordCert()">Submit Records</button>
 
-      <form>
-        <div class="siddhi">
-          Subject 1: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject1"> Subject
-          2: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject2"><br><br>
-          Subject 3: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject3"> Subject
-          4: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject4"><br><br>
-          Subject 5: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject5"> Subject
-          6: <input class="form-control" type="text" placeholder="Enter Subject" ng-model="subject6"><br><br>
-        </div>
-      </form>
-      <button (click)="findStudent()">Create Certificate</button>
-    </div>
-  </div>
 </div>
