@@ -10,6 +10,7 @@ import { EnrollStudentComponent } from './enroll-student/enroll-student.componen
 import { ViewEnrolledStudentComponent } from './view-enrolled-student/view-enrolled-student.component';
 import { ViewCertificateComponent } from './view-certificate/view-certificate.component';
 import { EditProfileDetailsComponent } from './edit-profile-details/edit-profile-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 const routes: Routes = [
   
@@ -50,6 +51,7 @@ const routes: Routes = [
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    ReactiveFormsModule,
     MatSidenavModule,
     MatListModule,
     MatLineModule,

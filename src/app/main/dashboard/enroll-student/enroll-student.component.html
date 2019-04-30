@@ -1,30 +1,72 @@
-<!----main section starts(student registration)-->
-<div class="form-group">
+<!----main section starts(student registration)
+
+<div class="bg-warning d-flex h-50 align-items-center justify-content-center">
+  <div class="card">
 
 
 
-  <label>ENROLLMENT FORM</label>
+    <div class="form-group">
+      <label>ENROLLMENT FORM</label>
 
-  <div class="contents">
-    PR-Number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
+      <div class="contents">
+        PR-Number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
 
-    First-name: <input class="form-control" type="text" placeholder="First-name" formControlName="firstName">
-    Second-Name: <input class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
-    Surname: <input class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
+        First-name: <input class="form-control" type="text" placeholder="First-name" formControlName="firstName">
+        Second-Name: <input class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
+        Surname: <input class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
 
-    College-Name: <input class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
-    Branch: <input class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
-    Year of admission: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" formControlName="YOP"><br><br><br>
+        College-Name: <input class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
+        Branch: <input class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
+        Year of admission: <input class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" formControlName="YOP"><br><br><br>
 
-    Email-Id: <input class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
+        Email-Id: <input class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
 
-    Mobile-Number: <input class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
+        Mobile-Number: <input class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
 
-    <button (click)="enrollStudent()">Submit Records</button>
-    <button (click)="cleardata()">clear data</button>
-
-
+        <button (click)="enrollStudent()">Submit Records</button>
+        <button (click)="cleardata()">clear data</button>
 
 
+
+
+      </div>
+    </div>
+  </div>
+
+  -->
+
+
+<div class="container h-100">
+  <div class="row h-100 align-items-center justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card">
+        <div class="card-body">
+
+
+
+
+          <div class="mat-form-field">
+            <form [formGroup]="enrollStudentForm">
+
+              PR-Number: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
+              First-name: <input matInput class="form-control" type="text" placeholder="First-name" formControlName="firstName">
+              Second-Name: <input matInput class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
+              Surname: <input matInput class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
+
+              College-Name: <input matInput class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
+              Branch: <input matInput class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
+              Year of admission: <input matInput class="form-control" type="text" placeholder="Ex:MAY/JUNE 2019" formControlName="YOP"><br><br><br>
+
+              Email-Id: <input matInput class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
+
+              Mobile-Number: <input matInput class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
+
+              <button (click)="enrollStudent()">Submit Records</button>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </div>
   </div>
 </div>

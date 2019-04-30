@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormBuilder } from '@angular/forms';
+import { FormGroup, FormBuilder,Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-enroll-student',
@@ -10,7 +10,7 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 export class EnrollStudentComponent implements OnInit {
 
   /*declared variables and validations*/
-  public recordForm: FormGroup;
+  public enrollStudentForm: FormGroup;
   public cert_PRno: any;
   public firstName: any;
   public secondName: any;
@@ -20,33 +20,37 @@ export class EnrollStudentComponent implements OnInit {
   public YOP: any;
   public emailId: any;
   public mobileNumber: any;
+  public data:string;
 
   constructor(private httpClient: HttpClient,
     private _fb: FormBuilder
   ) { }
 
   ngOnInit() {
-    this.recordForm = this._fb.group({
+    this.enrollStudentForm = this._fb.group({
       cert_PRno: null,
-      cert_CName: null,
-      cert_Seatno: null,
-      cert_examination: null,
-      cert_YOP: null,
-      cert_sububject: null
+      firstName: null,
+      secondName: null,
+      surname:null,
+      collegeName: null,
+      branch: null,
+      YOP: null,
+      emailId:null,
+      mobileNumber:null,
+
     });
   }
   enrollStudent() {
-    console.log("KKK");
-    console.log(this.firstName);
-   /* this.httpClient.post(`http://localhost:3000/`, this.queryForm.value).subscribe((data: any) => {
-      console.log(data);
-      this.queryForm.reset();
-    }
-    )*/
+
+    console.log(this.enrollStudentForm.value);
+
+
+    this.httpClient.post(`http://localhost:8000/`, this.enrollStudentForm.value).subscribe((data: any) => {
+       console.log(data);
+       this.enrollStudentForm.reset();
+     }
+     )
   }
 
-  clearData() {
-
-  }
-
+  
 }

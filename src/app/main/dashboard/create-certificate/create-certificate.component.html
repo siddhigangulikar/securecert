@@ -1,7 +1,5 @@
-
+<!-- <form [formGroup]="recordCertForm">
   <div class="form-group">
-
-
     <label>Add Certificate</label>
     <h5 style="color:green;margin-bottom:2%" id="success_create"></h5>
     <br>
@@ -12,5 +10,35 @@
     Enter Year of passing: <input class="form-control" type="text" placeholder="Ex: 2019" formControlName="cert_YOP"><br><br>
     Enter Sub: <input class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject"><br><br>
     <button (click)="recordCert()">Submit Records</button>
+</div>
+</form> -->
 
+<div class="container h-100">
+  <div class="row h-100 align-items-center justify-content-center">
+    <div class="col-12 col-md-8 col-lg-6">
+      <div class="card">
+        <div class="card-body">
+
+
+         
+
+            <div class="mat-form-field">
+                <form [formGroup]="recordCertForm">
+
+                Enter PR no. <input matInput class="form-control" placeholder="Ex: 101" formControlName="cert_PRno">
+                Enter name of college: <input matInput class="form-control" type="text" placeholder="Ex: PCCE" formControlName="cert_CName">
+                Enter Seat no.: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno">
+                Enter Examination: <input matInput class="form-control" type="text" placeholder="Ex: may/june" formControlName="cert_examination">
+                Enter Year of passing: <input matInput class="form-control" type="text" placeholder="Ex: 2019" formControlName="cert_YOP">
+                Enter Sub: <input matInput class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject">
+                <button (click)="recordCert()">Submit Records</button>
+
+            
+           </form>
+              </div>
+        
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
