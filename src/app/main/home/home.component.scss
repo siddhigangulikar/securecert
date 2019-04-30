@@ -1,113 +1,13 @@
-.hero {
-  background-image: url('/assets/canyon.jpg') !important;
-  background-size: cover;
-  background-position: center center;
-  font-size: 40px;
-  color: aliceblue;
-  text-align: center;
-}
-
-.title-home{
-  padding-top: 100px;
-}
-
-.subtitle{
-  font-size: 30px;
-}
-
-.f-column{
-  width: 22.3%;
-  margin-left:100px;
-}
-  
-  /* Display the columns below each other instead of side by side on small screens */
-  @media screen and (max-width: 650px) {
-    .f-column {
-      width: 100%;
-      display:circle;
+.hero-home {
+    position: relative;
+    .content {
+        position: absolute;
+        top: 100px;
     }
-  }
-  
-  
-  /* Some left and right padding inside the container */
-  .container {
-    background-color:black;
-    font-size: 21px;
-  }
-  
-
-  .example-form {
-    width: 50%;
-    margin-left: 800px;
-  }
-  
-  .example-full-width {
-    width: 50%;
-    line-height: 100px;
-  }
-
-.f-column{
-  float: left;
-  width: 21.33%;
-  padding: 8px;
-  margin-right: 90px;
 }
+.searchForm
+{
 
+ 
 
-  .f-row::after{
-    content: "";
-  clear: both;
-  display: table;
-  }
-  
-  .title-contact{
-    font-size: 40px;
-    align-content: left;
-    margin-top: 550px;
-  }
-
-  .container{
-    background-color:white;
-    color: black;
-    
-  }
-
-
-.form-contact{
-  text-align: right;
-  margin-right: 70px;
-  font-size: 35px;
-  padding: 30px;
-}
-  
-  /* Style inputs with type="text", select elements and textareas */
-input[type=text], select, textarea {
-  width: 20%; /* Full width */
-  padding: 12px; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-  
-}
-
-input[type=number], select, textarea {
-  width: 20%; /* Full width */
-  padding: 12px; /* Some padding */  
-  border: 1px solid #ccc; /* Gray border */
-  border-radius: 4px; /* Rounded borders */
-  box-sizing: border-box; /* Make sure that padding and width stays in place */
-}
-
-/*css for search student*/
-.button1{
-  padding: 7px 20px;
-text-align: center;
-font-size: 20px;
-margin-right: 95px;
-}
-
-.button1:hover {
-  background-color:green;
-  color: white;
-  font-size: 30px;
 }
