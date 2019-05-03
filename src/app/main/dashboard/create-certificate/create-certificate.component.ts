@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
+import { FormGroup, FormBuilder, FormControl, Validators } from '@angular/forms';
 
 
 @Component({
@@ -16,8 +16,9 @@ import { FormGroup, FormBuilder, FormControl } from '@angular/forms';
 export class CreateCertificateComponent implements OnInit {
 
   public recordCertForm: FormGroup;
-  
-  public PRno: any;
+  public transferCertForm:FormGroup;
+  public firstName:any;
+  public cert_PRno: any;
   public cert_CName: any;
   public cert_Seatno: any;
   public cert_examination: any;
@@ -41,13 +42,18 @@ export class CreateCertificateComponent implements OnInit {
   ngOnInit() {
 
     this.recordCertForm = this.fb.group({
-      cert_PRno: null,
+      cert_PRno: [null,[Validators.required]],
       cert_CName: null,
       cert_Seatno: null,
       cert_examination: null,
       cert_YOP: null,
       cert_sububject: null
     });
+
+    this.transferCertForm=this.fb.group({
+      cert_PRno:null,
+      firstName:null
+    })
   }
 
   /*recordCert() {
@@ -65,16 +71,17 @@ export class CreateCertificateComponent implements OnInit {
   recordCert() {
     console.log(this.recordCertForm.value)
 
-  this.httpClient.post(`http://localhost:8000/certificates`, this.recordCertForm.value).subscribe((data: string) => {
+  this.httpClient.post(`http://localhost:8000/addNewCertificate`, this.recordCertForm.value).subscribe((data: string) => {
            console.log(data);       }
       )
     this.recordCertForm.reset();
     };
 
-  // transferCertificate() {
+   transferCert() {
 
-  //   this.httpClient.post(`http://localhost:8000/certificates/${this.transferForm.get('seatNo').value}/transferName`, this.transferForm.value).subscribe((data: any) => {
-  //     console.log(data);
-  //   });
-  // }
+     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_PRno').value}/transferName`, this.transferCertForm.value).subscribe((data: any) => {
+   console.log(data);
+       //this.transferCertForm.reset();
+     });
+  }
 }

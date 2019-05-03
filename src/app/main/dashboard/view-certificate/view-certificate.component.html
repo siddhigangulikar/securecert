@@ -1,15 +1,36 @@
-<div class="title">
-<span>VIEW CERTIFICATES
-</span></div>
+<div class="form-group">
+    <label>Query a Specific Certificate</label><br>
+    <h5 style="color:red;margin-bottom:2%" id="error_query"></h5>
 
-<div class="buttons">
-  <a mat-stroked-button routerLink=".">SEM1</a>
-  <a mat-stroked-button routerLink=".">SEM2</a>
-  <a mat-stroked-button routerLink=".">SEM3</a>
-  <a mat-stroked-button routerLink=".">SEM4</a>
-  <br><br>
-  <a mat-stroked-button routerLink=".">SEM5</a>
-  <a mat-stroked-button routerLink=".">SEM6</a>
-  <a mat-stroked-button routerLink=".">SEM7</a>
-  <a mat-stroked-button routerLink=".">SEM8</a>
-</div>
+
+    <form [formGroup]="queryCertForm">
+      <label for="query">Enter a Seat number:</label>
+      <input class="form-control" type="text" placeholder="Ex: 101" name="query" formControlName="seatNo">
+      <button (click)="queryCert()">Query Specific</button>
+    </form>
+
+  </div>
+  <table class="table">
+  <tr>
+    <th>PR no.</th>
+    <th>Student Name</th>
+    <th>College Name</th>
+    <th>Seat no. </th>
+    <th>Examination</th>
+    <th>Year of Passing</th>
+    <th>subject</th>
+
+  </tr>
+  <tr>
+
+    <td>{{Newcertificate.prNo}}</td>
+    <td>{{Newcertificate.studentName}}</td>
+    <td>{{Newcertificate.collegeName}}</td>
+    <td>{{Newcertificate.seatNo}}</td>
+    <td>{{Newcertificate.examination}}</td>
+    <td>{{Newcertificate.yearOfPassing}}</td>
+    <td>{{Newcertificate.sub}}</td>
+
+  </tr>
+</table>
+  

@@ -34,7 +34,7 @@ export class EnrollStudentComponent implements OnInit {
       surname:null,
       collegeName: null,
       branch: null,
-      YOP: null,
+      YOA: null,
       emailId:null,
       mobileNumber:null,
 
@@ -45,7 +45,7 @@ export class EnrollStudentComponent implements OnInit {
     console.log(this.enrollStudentForm.value);
 
 
-    this.httpClient.post(`http://localhost:8000/`, this.enrollStudentForm.value).subscribe((data: any) => {
+    this.httpClient.post(`http://localhost:8000/addNewStudent`, this.enrollStudentForm.value).subscribe((data: any) => {
        console.log(data);
        this.enrollStudentForm.reset();
      }

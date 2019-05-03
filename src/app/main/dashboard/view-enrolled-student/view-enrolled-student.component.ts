@@ -20,7 +20,7 @@ export class ViewEnrolledStudentComponent implements OnInit {
   public emailId: any;
   public Branch: any;
   public mobileNumber: any;
-
+ public secondName:any;
   public student: StudentRecord = new StudentRecord({});
 
   constructor(
@@ -36,10 +36,10 @@ export class ViewEnrolledStudentComponent implements OnInit {
     });
   }
 
-  fetchCertificates() {
+  viewEnrolled() {
     this.http.get(`http://localhost:8000/get_student/${this.certPRno.value}`).subscribe((response: any[]) => {
       console.log(response);
-      // this.student = new StudentRecord(response);
+       this.student = new StudentRecord(response);
     });
   }
 
