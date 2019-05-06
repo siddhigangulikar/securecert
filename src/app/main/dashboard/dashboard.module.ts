@@ -11,6 +11,7 @@ import { ViewEnrolledStudentComponent } from './view-enrolled-student/view-enrol
 import { ViewCertificateComponent } from './view-certificate/view-certificate.component';
 import { EditProfileDetailsComponent } from './edit-profile-details/edit-profile-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
+import { CertificateComponent } from './certificate/certificate.component';
 
 const routes: Routes = [
   
@@ -21,6 +22,10 @@ const routes: Routes = [
       {
         path: 'create-certificate',
         component: CreateCertificateComponent,
+      },
+      {
+        path: 'certificate',
+        component: CertificateComponent,
       },
       {
         path: 'enroll-student',
@@ -47,7 +52,7 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  declarations: [DashboardComponent, SidenavComponent, CreateCertificateComponent, LandingComponent, EnrollStudentComponent, ViewEnrolledStudentComponent, ViewCertificateComponent, EditProfileDetailsComponent],
+  declarations: [DashboardComponent, SidenavComponent, CreateCertificateComponent, LandingComponent, EnrollStudentComponent, ViewEnrolledStudentComponent, ViewCertificateComponent, EditProfileDetailsComponent, CertificateComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
