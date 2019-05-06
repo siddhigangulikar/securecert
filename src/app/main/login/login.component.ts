@@ -29,10 +29,12 @@ export class LoginComponent implements OnInit {
       }
     })
   }
-
   ngOnInit() {
     this.buildForm();
   }
+
+
+
   buildForm() {
     this.loginForm = this.formBuilder.group({
       username: [null, [Validators.required]],
@@ -45,12 +47,13 @@ export class LoginComponent implements OnInit {
     if(this.type=="Creator")
     {
       data=1;
+
     }
     else if(this.type=="Student")
     {
       data=2;
     }
     this._loginService.login(this.loginForm.value,data);
-
   }
 }
+

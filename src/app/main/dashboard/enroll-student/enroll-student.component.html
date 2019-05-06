@@ -34,37 +34,35 @@
   </div>
 
   -->
-
-
-<div class="container h-100">
+<div class="container h-10">
   <div class="header">
-      <h6 >Enroll Student Form</h6>
+    <h2>Enroll Student Form</h2>
   </div>
-    
+
   <div class="row h-100 align-items-center justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
       <div class="card">
-          
+
         <div class="card-body">
-
-
 
 
           <div class="mat-form-field">
             <form [formGroup]="enrollStudentForm">
 
-              PR-Number: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br><br>
-              First-name: <input matInput class="form-control" type="text" placeholder="First-name" formControlName="firstName">
-              Second-Name: <input matInput class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
-              Surname: <input matInput class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br><br>
+              PR-Number: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno"><br><br>
+              First-name: <input matInput class="form-control" type="text" placeholder="First-name" formControlName="firstName"><br>
+              Second-Name: <input matInput class="form-control" type="text" placeholder="Middle name" formControlName="secondName"><br>
+              Surname: <input matInput class="form-control" type="text" placeholder="Surname" formControlName="surname"><br><br>
 
-              College-Name: <input matInput class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName">
-              Branch: <input matInput class="form-control" type="text" placeholder="Ex:Information Technology" formControlName="branch">
-              Year of admission: <input matInput class="form-control" type="text" placeholder="Ex: 2019" formControlName="YOA"><br><br><br>
+              College-Name: <input matInput class="form-control" type="text" placeholder="Ex:PCCE" formControlName="collegeName"><br>
+              Branch: <input matInput class="form-control" type="text" placeholder="Ex:Information Technology"
+                formControlName="branch"><br>
+              Year of admission: <input matInput class="form-control" type="text" placeholder="Ex: 2019"
+                formControlName="YOA"><br>
 
-              Email-Id: <input matInput class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br><br><br>
+              Email-Id: <input matInput class="form-control" type="text" placeholder="abc@gmail.com" formControlName="emailId"><br>
 
-              Mobile-Number: <input matInput class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br><br>
+              Mobile-Number: <input matInput class="form-control" type="number" placeholder="987654321" formControlName="mobileNumber"><br>
 
               <button (click)="enrollStudent()">Submit Records</button>
             </form>

@@ -14,7 +14,7 @@
 </form> -->
 
 <div class="container h-100">
-  <h5>Create Certificate Form</h5>
+  <h2>Create Certificate Form</h2>
   <div class="row h-100 align-items-center justify-content-center">
     <div class="col-12 col-md-8 col-lg-6">
       <div class="card">
@@ -22,20 +22,18 @@
         <div class="card-body">
 
 
-
-
           <div class="mat-form-field">
             <form [formGroup]="recordCertForm">
 
-              Enter PR no. <input matInput class="form-control" placeholder="Ex: 101" formControlName="cert_PRno">
-              Enter name of college: <input matInput class="form-control" type="text" placeholder="Ex: PCCE"
-                formControlName="cert_CName">
-              Enter Seat no.: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno">
+              Enter PR Number: <input matInput class="form-control" placeholder="Ex: 101" formControlName="cert_PRno"><br>
+              Enter Name of the College: <input matInput class="form-control" type="text" placeholder="Ex: PCCE"
+                formControlName="cert_CName"><br>
+              Enter Seat Number: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno"><br>
               Enter Examination: <input matInput class="form-control" type="text" placeholder="Ex: may/june"
-                formControlName="cert_examination">
+                formControlName="cert_examination"><br>
               Enter Year of passing: <input matInput class="form-control" type="text" placeholder="Ex: 2019"
-                formControlName="cert_YOP">
-              Enter Sub: <input matInput class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject">
+                formControlName="cert_YOP"><br>
+              Enter Subject: <input matInput class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject"><br>
               <button (click)="recordCert()">Submit Records</button>
 
 

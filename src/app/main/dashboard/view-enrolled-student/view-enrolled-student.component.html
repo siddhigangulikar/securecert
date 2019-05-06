@@ -1,15 +1,16 @@
 <div class="form-group">
-  <label>Search For A Specific Student</label><br>
+  <label>
+    <h3>Search For A Specific Student</h3>
+  </label><br>
   <h5 style="color:red;margin-bottom:2%" id="error_query"> Please enter a valid PR number.</h5>
   <form [formGroup]="queryForm">
 
-  Please Enter a PR number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno">
+    Enter a PR number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno">
 
- 
 
-<button (click)="viewEnrolledd()">Query Specific</button>
+    <button (click)="viewEnrolled()">Query Specific</button>
 
-</form>
+  </form>
 </div>
 
 <table class="table">
