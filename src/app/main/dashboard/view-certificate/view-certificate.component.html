@@ -1,24 +1,27 @@
 <div class="form-group">
-    <label>Query a Specific Certificate</label><br>
+    <div class="fontstyle"><br><label><strong>Query A Specific Certificate</strong></label></div><br>
     <h5 style="color:red;margin-bottom:2%" id="error_query"></h5>
 
 
     <form [formGroup]="queryCertForm">
-      <label for="query">Enter a Seat number:</label>
-      <input class="form-control" type="text" placeholder="Ex: 101" name="query" formControlName="seatNo">
+
+    <div class="main">
+      <label for="query"><strong>Enter Seat Number:</strong></label>
+      <input class="form-control" type="text" placeholder="Ex: 8-9 digit number" name="query" formControlName="seatNo"><br>
       <button (click)="queryCert()">Query Specific</button>
+   </div>
     </form>
 
   </div>
   <table class="table">
   <tr>
-    <th>PR no.</th>
+    <th>PR number</th>
     <th>Student Name</th>
     <th>College Name</th>
-    <th>Seat no. </th>
+    <th>Seat number </th>
     <th>Examination</th>
     <th>Year of Passing</th>
-    <th>subject</th>
+    <th>Subject</th>
 
   </tr>
   <tr>

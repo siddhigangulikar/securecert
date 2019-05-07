@@ -32,6 +32,13 @@
 
 */
 
+body{
+  background-image: url("studentbg.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
+
 
 form{
   display: flex;
@@ -45,8 +52,8 @@ form{
 }
 
 .card{
-  margin-left: 30px;
-  margin-top: 10px;
+  margin-left: 20px;
+  margin-top: 20px;
   
 }
 
@@ -61,13 +68,33 @@ font-size: 40px;
 
 
 .container{
-  background-color: pink;
-  line-height: 100px;
+  background-color: rgb(111, 142, 226);
+  text-align: center;
+width: 100%;
+
 }
 
 .header
 {
-
   text-align: center;
+  margin-bottom: 50px;
+}
+
+  .row
+{
+    display: table;
+    width: 110%; /*Optional*/
+    border-spacing: 20px; /*Optional*/
+}
+.column
+{
+    display: table-cell;
+    width: 30%;
 
 }
+
+  
+  .align{
+    margin-left: 25px;
+    text-align: left;
+  }

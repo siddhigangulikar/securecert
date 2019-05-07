@@ -1,15 +1,16 @@
 <div class="form-group">
   <label>
-    <h3>Search For A Specific Student</h3>
+    <div class="fontstyle"><br><label><strong>Search For A Specific Student</strong></label></div><br>
   </label><br>
   <h5 style="color:red;margin-bottom:2%" id="error_query"> Please enter a valid PR number.</h5>
   <form [formGroup]="queryForm">
 
-    Enter a PR number: <input class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_PRno">
+    <div class="main">
+     <strong> Enter a PR number:</strong> <input class="form-control" type="text" placeholder="Ex: Enter 8-9 digit number" formControlName="cert_PRno">
+<br>
 
-
-    <button (click)="viewEnrolled()">Query Specific</button>
-
+      <button (click)="viewEnrolled()">Query Specific</button>
+    </div>
   </form>
 </div>
 
@@ -37,13 +38,3 @@
     <td>{{student.mobileNumber}}</td>
   </tr>
 </table>
-
-
-
-
-
-
-
-
-
-
