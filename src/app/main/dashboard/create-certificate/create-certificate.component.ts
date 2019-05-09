@@ -42,17 +42,17 @@ export class CreateCertificateComponent implements OnInit {
   ngOnInit() {
 
     this.recordCertForm = this.fb.group({
-      cert_PRno: [null,[Validators.required]],
-      cert_CName: null,
-      cert_Seatno: null,
-      cert_examination: null,
-      cert_YOP: null,
-      cert_sububject: null
+      cert_PRno: [null,[Validators.required, Validators.minLength(9),Validators.maxLength(11)]],
+      cert_CName: [null,Validators.required],
+      cert_Seatno: [null,[Validators.required, Validators.minLength(5),Validators.maxLength(7)]],
+      cert_examination: [null,Validators.required],
+      cert_YOP: [null,[Validators.required, Validators.maxLength(4)]],
+      cert_sububject: [null,[Validators.required, Validators.maxLength(3)]],
     });
 
     this.transferCertForm=this.fb.group({
-      cert_PRno:null,
-      firstName:null
+      cert_PRno:[null,[Validators.required, Validators.minLength(9),Validators.maxLength(11)]],
+      firstName:[null,Validators.required],
     })
   }
 
@@ -81,6 +81,7 @@ export class CreateCertificateComponent implements OnInit {
 
      this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_PRno').value}/transferName`, this.transferCertForm.value).subscribe((data: any) => {
    console.log(data);
+   
        //this.transferCertForm.reset();
      });
   }

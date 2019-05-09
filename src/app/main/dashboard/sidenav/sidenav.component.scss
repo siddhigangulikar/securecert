@@ -3,11 +3,23 @@
 }
 
 .mat-card-image{
-    border: black;
+    border: 2px solid black;
 align-content: center;
 margin-left: 50px;
 }
 
 h3{
     text-align: center;
+}
+
+a, h3, .mat-list-item{
+    color: white;
+}
+
+ a:active{
+    background-color: green;
+}
+.mat-nav-list{
+    background-color:rgb(57, 46, 212);
+    height: 100%;
 }

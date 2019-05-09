@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { LoginService } from 'src/app/shared/services/login.service';
+import { TopnavComponent } from '../../topnav/topnav.component';
+import { Router } from '@angular/router';
+
 
 @Component({
   selector: 'app-landing',
@@ -7,9 +11,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class LandingComponent implements OnInit {
 
-  constructor() { }
+  constructor(private router: Router) { }
+  type:Number
 
   ngOnInit() {
+    this.type= LoginService.type;
+    console.log("This page is", this.type)
+  }
+
+
+  Logout(){
+    console.log("Logout!!!!!!!!")
+    this.router.navigate(['/'])
   }
 
 }

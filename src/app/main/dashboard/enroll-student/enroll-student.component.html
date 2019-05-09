@@ -34,71 +34,72 @@
   </div>
 
   -->
+
 <div class="container">
   <div class="header">
     <h3><br><strong>Student Enrollment Form</strong></h3>
   </div>
 
   <div class="row h-100">
-    <div class="col-12 col-md-4 col-lg-6">
+    <div class="col">
 
       <div class="mat-form-field">
         <form [formGroup]="enrollStudentForm">
 
           <div class="align">
 
-            PR Number <label style="color:red"> *</label>: <input matInput class="form-control" type="text" placeholder="Ex: 101"
+            PR Number<label style="color:red"> *</label><input matInput class="form-control col-md-6" type="text" placeholder="Ex: 101"
               formControlName="cert_PRno"><br>
 
             <div class="row">
               <div class="column">
-                First-Name <label style="color:red"> *</label>: <input matInput class="form-control" type="text"
+                First-Name<label style="color:red"> *</label><input matInput class="form-control" type="text"
                   placeholder="First-name" formControlName="firstName">
               </div>
 
 
               <div class="column">
-                Second-Name: <input matInput class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
+                Second-Name<input matInput class="form-control" type="text" placeholder="Middle name" formControlName="secondName">
               </div>
 
 
               <div class="column">
-                Last-Name <label style="color:red"> *</label>: <input matInput class="form-control" type="text"
+                Last-Name<label style="color:red"> *</label><input matInput class="form-control" type="text"
                   placeholder="Surname" formControlName="surname">
               </div>
             </div>
 
 
             <div class="row">
-              College-Name <label style="color:red"> *</label>: <input matInput class="form-control" type="text"
+              College-Name<label style="color:red"> *</label><input matInput class="form-control col-md-6" type="text"
                 placeholder="Ex:PCCE" formControlName="collegeName">
             </div>
 
             <div class="row">
-              Branch <label style="color:red"> *</label>: <input matInput class="form-control" type="text" placeholder="Ex:Information Technology"
+              Branch<label style="color:red"> *</label><input matInput class="form-control col-md-6" type="text" placeholder="Ex:Information Technology"
                 formControlName="branch">
             </div>
 
             <div class="row">
-              Year of Admission <label style="color:red"> *</label>: <input matInput class="form-control" type="text"
+              Year of Admission<label style="color:red"> *</label><input matInput class="form-control col-md-6" type="text"
                 placeholder="Ex: 2019" formControlName="YOA">
             </div>
 
 
 
             <div class="row">
-              Email-Id <label style="color:red">*</label>: <input matInput class="form-control" type="text" placeholder="abc@gmail.com"
+              Email-Id<label style="color:red">*</label><input matInput class="form-control col-md-6" type="text" placeholder="abc@gmail.com"
                 formControlName="emailId">
 
             </div>
 
             <div class="row">
-              Mobile-Number <label style="color:red">*</label>: <input matInput class="form-control" type="number"
+              Mobile-Number<label style="color:red">*</label><input matInput class="form-control col-md-6" type="number"
                 placeholder="987654321" formControlName="mobileNumber"><br>
             </div>
 
 
-            <button (click)="enrollStudent()">Submit Records</button>
+            <button class="button" (click)="enrollStudent()">Submit Records</button>
             <br><br>
           </div>
         </form>

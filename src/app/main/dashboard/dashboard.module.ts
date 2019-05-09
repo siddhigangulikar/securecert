@@ -12,6 +12,7 @@ import { ViewCertificateComponent } from './view-certificate/view-certificate.co
 import { EditProfileDetailsComponent } from './edit-profile-details/edit-profile-details.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { CertificateComponent } from './certificate/certificate.component';
+// import {TopnavComponent} from '../topnav/topnav.component';
 
 const routes: Routes = [
   

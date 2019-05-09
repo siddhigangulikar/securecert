@@ -28,15 +28,15 @@ export class EnrollStudentComponent implements OnInit {
 
   ngOnInit() {
     this.enrollStudentForm = this._fb.group({
-      cert_PRno: null,
-      firstName: null,
-      secondName: null,
-      surname:null,
-      collegeName: null,
-      branch: null,
-      YOA: null,
-      emailId:null,
-      mobileNumber:null,
+      cert_PRno: [null,[Validators.required, Validators.minLength(9), Validators.maxLength(11)]],
+      firstName: [null, Validators.required],
+      secondName: [null, Validators.required],
+      surname:[null, Validators.required],
+      collegeName: [null, Validators.required],
+      branch: [null, Validators.required],
+      YOA: [null,[Validators.required,  Validators.maxLength(4)]],
+      emailId:[null, [Validators.required, Validators.email]],
+      mobileNumber:[null,[Validators.required, Validators.minLength(10)]],
 
     });
   }

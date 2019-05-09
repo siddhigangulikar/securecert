@@ -8,10 +8,13 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class LoginService {
+  static type: Number
+  static loggedIn: Boolean = false
 
   constructor(
     private _http: HttpClient,
     private router: Router
+    
 
   ) { }
 

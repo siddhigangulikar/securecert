@@ -1,7 +1,19 @@
+<!-- <app-topnav></app-topnav> -->
+<button on-click="Logout()" >Logout</button>
 <div class="class">
-  Welcome To The Dashboard.
+  Welcome To The Dashboard!
 </div>
-
+<div class="hi">
 <div class="data">
-<h6>Welcome you have logged in,now you can use the side navbar and select the option ,to perform your rights.</h6>
+<h3>You have successfully logged in. You can now select appropriate option, to perform your rights.</h3>
+</div>
+<div *ngIf="type==0">welcome to University</div>
+<div *ngIf="type==1">
+  <h4>You can make use of the following functionalities:<br>
+    1. Enroll Students<br>
+    2. View Enrolled Students<br>
+  </h4>
+
+</div>
+<div *ngIf="type==2"> Bye Student</div>
 </div>
