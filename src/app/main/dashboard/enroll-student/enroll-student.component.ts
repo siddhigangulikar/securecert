@@ -36,7 +36,7 @@ export class EnrollStudentComponent implements OnInit {
       branch: [null, Validators.required],
       YOA: [null,[Validators.required,  Validators.maxLength(4)]],
       emailId:[null, [Validators.required, Validators.email]],
-      mobileNumber:[null,[Validators.required, Validators.minLength(10)]],
+      mobileNumber:[null,[Validators.required, Validators.maxLength(10)]],
 
     });
   }

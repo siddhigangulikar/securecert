@@ -27,7 +27,7 @@
 
           <div class="align">
 
-            Enter PR Number: <input matInput class="form-control" placeholder="Ex: Enter 8-9 digit number"
+            Enter PR Number: <input matInput class="form-control" placeholder="Ex: Enter 9-11 digit number"
               formControlName="cert_PRno"><br>
             Enter Name of the College: <input matInput class="form-control" type="text" placeholder="Ex: PCCE"
               formControlName="cert_CName"><br>
@@ -36,8 +36,9 @@
               formControlName="cert_examination"><br>
             Enter Year of passing: <input matInput class="form-control" type="text" placeholder="Ex: 2019"
               formControlName="cert_YOP"><br>
-            Enter Subject: <input matInput class="form-control" type="text" placeholder="Ex: abc" formControlName="cert_sububject"><br>
-            <button (click)="recordCert()">Submit Records</button>
+            Enter Subject 1: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 1 " formControlName="cert_sububject"><br>
+            <button [disabled]="recordCertForm.invalid" color="primary" mat-stroked-button (click)="recordCert()">Submit
+              Records</button>
 
 
           </div>
@@ -50,25 +51,26 @@
 <br><br><br><br><br><br>
 
 <div class="container1">
-    <div class="header">
-        <h3><br><strong>Transfer Certificate</strong></h3>
-      </div>
+  <div class="header">
+    <h3><br><strong>Transfer Certificate</strong></h3>
+  </div>
   <div class="row h-100">
     <div class="col">
-     
 
-          <div class="mat-form-field">
-            <form [formGroup]="transferCertForm">
-              <div class="form-group">
 
-                <div class="align">
-                Enter PR no. <input matInput class="form-control" placeholder="Ex: Enter 8-9 digit number" formControlName="cert_PRno">
-                Enter Student Name: <input matInput class="form-control" placeholder="Ex: Amogh" formControlName="firstName"><br><br>
-                <button (click)="transferCert()">Transfer Certificate</button>
-              </div>
-              </div>
-            </form>
+      <div class="mat-form-field">
+        <form [formGroup]="transferCertForm">
+          <div class="form-group">
+
+            <div class="align">
+              Enter Seat Number: <input matInput class="form-control" placeholder="Enter seat number." formControlName="cert_Seatno">
+              Enter Student Name: <input matInput class="form-control" placeholder="Ex: Amogh" formControlName="firstName"><br><br>
+              <button [disabled]="transferCertForm.invalid" color="primary" mat-stroked-button (click)="transferCert()">Transfer
+                Certificate</button>
+            </div>
           </div>
+        </form>
+      </div>
 
     </div>
   </div>

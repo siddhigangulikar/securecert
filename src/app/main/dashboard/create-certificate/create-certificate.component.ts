@@ -51,7 +51,7 @@ export class CreateCertificateComponent implements OnInit {
     });
 
     this.transferCertForm=this.fb.group({
-      cert_PRno:[null,[Validators.required, Validators.minLength(9),Validators.maxLength(11)]],
+      cert_Seatno:[null,[Validators.required,Validators.minLength(4)]],
       firstName:[null,Validators.required],
     })
   }
@@ -79,7 +79,7 @@ export class CreateCertificateComponent implements OnInit {
 
    transferCert() {
 
-     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_PRno').value}/transferName`, this.transferCertForm.value).subscribe((data: any) => {
+     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_Seatno').value}/transferName`, this.transferCertForm.value).subscribe((data: any) => {
    console.log(data);
    
        //this.transferCertForm.reset();

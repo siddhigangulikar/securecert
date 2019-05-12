@@ -32,9 +32,11 @@ export class ViewCertificateComponent implements OnInit {
 
 
   queryCert() {
-    console.log("jdbad");
-    this.httpClient.get(`http://localhost:8000/certificates/${this.queryCertForm.get('seatNo').value}`).subscribe(res => {
-      this.Newcertificate = new Certificate(res);
+ 
+
+
+      this.httpClient.get(`http://localhost:8000/get_cert/${this.queryCertForm.get('seatNo').value}`, this.queryCertForm.value).subscribe(res => {
+        this.Newcertificate = new Certificate(res);
 
     });
 

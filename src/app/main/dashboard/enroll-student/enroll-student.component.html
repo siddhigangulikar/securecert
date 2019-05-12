@@ -99,7 +99,7 @@
             </div>
 
 
-            <button class="button" (click)="enrollStudent()">Submit Records</button>
+            <button [disabled]="enrollStudentForm.invalid" color="primary" mat-stroked-button (click)="enrollStudent()">Submit Records</button>
             <br><br>
           </div>
         </form>
