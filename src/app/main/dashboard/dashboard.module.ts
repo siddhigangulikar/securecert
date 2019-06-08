@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './dashboard.component';
-import { MatSidenavModule, MatListModule, MatLineModule, MatButtonModule, MatCardModule } from '@angular/material';
+import { MatSidenavModule, MatListModule, MatLineModule, MatButtonModule, MatCardModule, MatFormFieldModule, MatSelectModule, MatInputModule } from '@angular/material';
 import { SidenavComponent } from './sidenav/sidenav.component';
 import { CreateCertificateComponent } from './create-certificate/create-certificate.component';
 import { LandingComponent } from './landing/landing.component';
@@ -62,7 +62,10 @@ const routes: Routes = [
     MatListModule,
     MatLineModule,
     MatButtonModule,
-    MatCardModule
+    MatCardModule,
+    MatFormFieldModule,
+    MatSelectModule,
+    MatInputModule
 
     ]
 })

@@ -4,11 +4,10 @@ import { MainComponent } from './main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TopnavComponent } from './topnav/topnav.component';
 
-import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule, MatButtonModule } from '@angular/material';
+import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule, MatButtonModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
 // import { HomeComponent } from './home/home.component';
 // import { LandingComponent } from './dashboard/landing/landing.component';
 import {HomeModule} from './home/home.module';
-import { CertificateTempComponent } from './certificate-temp/certificate-temp.component';
 
 
 const routes: Routes = [
@@ -40,7 +39,7 @@ const routes: Routes = [
   declarations: [
     MainComponent,
     TopnavComponent,
-    CertificateTempComponent,
+    
     ],
 
   imports: [
@@ -52,6 +51,8 @@ const routes: Routes = [
     MatMenuModule,
     MatListModule,
     MatButtonModule,
+    MatFormFieldModule,
+    MatSelectModule,
     
     
     

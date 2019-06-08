@@ -34,7 +34,6 @@ export class HomeComponent implements OnInit {
    /* this.router.navigate(['/'])*/
     this.httpClient.get(`http://localhost:8000/get_cert/${this.queryCertForm.get('seatNo').value}`, this.queryCertForm.value).subscribe(res => {
       this.Newcertificate = new Certificate(res);
-    
   });
 
 }

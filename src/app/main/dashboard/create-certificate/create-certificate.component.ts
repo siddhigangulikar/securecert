@@ -79,8 +79,8 @@ export class CreateCertificateComponent implements OnInit {
 
    transferCert() {
 
-     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_Seatno').value}/transferName`, this.transferCertForm.value).subscribe((data: any) => {
-   console.log(data);
+     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_Seatno').value}/transferName`, this.transferCertForm.value).subscribe(res => {
+   console.log(res.valueOf());
    
        //this.transferCertForm.reset();
      });

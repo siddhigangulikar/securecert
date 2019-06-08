@@ -44,13 +44,25 @@ export class EnrollStudentComponent implements OnInit {
 
     console.log(this.enrollStudentForm.value);
 
+/*
+    this.httpClient.post(`http://localhost:8000/addNewStudent`, this.enrollStudentForm.value
+    , {responseType: 'text'} ).subscribe(res => {
+      console.log(res);
+      
+    }   
+    )  */
+    
+     const response = this.httpClient.post(`http://localhost:8000/addNewStudent`, this.enrollStudentForm.value
+     , {responseType: 'text'} )
+     console.log(response);
 
-    this.httpClient.post(`http://localhost:8000/addNewStudent`, this.enrollStudentForm.value).subscribe((data: any) => {
-       console.log(data);
-       this.enrollStudentForm.reset();
-     }
-     )
+if(response){alert("LL");}
+else{alert("qq");}
+
+   //  this.enrollStudentForm.reset();
+
   }
+
 
   
 }

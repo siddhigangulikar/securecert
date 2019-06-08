@@ -20,7 +20,7 @@ export class ViewEnrolledStudentComponent implements OnInit {
   public emailId: any;
   public Branch: any;
   public mobileNumber: any;
- public secondName:any;
+  public secondName:any;
   public student: StudentRecord = new StudentRecord({});
 
   constructor(
