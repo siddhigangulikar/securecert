@@ -25,11 +25,17 @@
                 <form action="#" class="searchForm">
                     <div class="row justify-content-center">
                         <div class="col-lg-8 d-flex align-items-center form-group">
-                            <input type="text" name="search" placeholder="Enter Permanent Registration Number here to verify "
-                                class="form-control border-0 shadow-0" style="width:800px;height:50px;">
-                            <button (click)="queryCert()" style="width:100px;height:50px;"  class="btn btn-primary btn-block rounded-xl h-100">
+                            <h4><strong>CLICK HERE TO VERIFY ANY STUDENT CERTIFICATE</strong></h4>
+                            <!--<input type="text" name="search" placeholder="Enter Permanent Registration Number here to verify "
+                                class="form-control border-0 shadow-0" style="width:800px;height:50px;">-->
+
+                            <button (click)="queryCert()" routerLink="cert-verifier" style="width:100px;height:50px;"
+                                class="btn btn-primary btn-block rounded-xl h-100">
                                 <mat-icon>search</mat-icon>
                             </button>
+                            <!--<button (click)="queryCert()" style="width:100px;height:50px;" class="btn btn-primary btn-block rounded-xl h-100">
+                                <mat-icon>search</mat-icon>
+                            </button>-->
                         </div>
                     </div>
                 </form>
@@ -100,10 +106,131 @@
 </section>
 
 
+<!--Team Section-->
+<section class="title-team is-info is-fullheight is-bold">
+    <h1 class="title" style="font-family:'Anton', sans-serif,font;font-size: 50px;">TEAM</h1>
 
+<div class="main">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Biswas Tiwari</h3>
+                        <span class="post">Backend Chaincode Developer</span>
+                        <address>Contact: <a href="biswastiwas@gmail.com"><br>biswastiwas@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Gaurav Salunke</h3>
+                        <span class="post">Backend Chaincode Developer</span>
+                        <address>Contact: <a href="gauravsalunke@gmail.com">gauravsalunke@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Amogh Karapurkar</h3>
+                        <span class="post">Frontend Developer</span>
+                        <address>Contact: <a href="amoghkarapurkar@gmail.com">amoghkarapurkar@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <br><br>
+        <div class="row">
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Dhruvi Patil</h3>
+                        <span class="post">Middleware Developer</span>
+                        <address>Contact: <a href="dhruvipatil@gmail.com"><br>dhruvipatil@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Andy Carvalho</h3>
+                        <span class="post">Middleware Developer</span>
+                        <address>Contact: <a href="andycarvalho@gmail.com"><br>andycarvalho@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+          
+            <div class="col-md-3 col-sm-6">
+                <div class="our-team">
+                    <div class="pic">
+                        <img src="../assets/sid.jpg">
+                    </div>
+                    <div class="team-content">
+                        <h3 class="title">Siddhi Gangulikar</h3>
+                        <span class="post">Frontend Developer</span>
+                        <address>Contact: <a href="siddhigangulikar@gmail.com">siddhigangulikar@gmail.com</a></address>
+                    </div>
+                    <ul class="social">
+                        <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                        <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+                        <li><a href="#"><i class="fa fa-instagram"></i></a></li>
+                        <li><a href="#"><i class="fa fa-github"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+</section>
 
-
-<!--section for team-->
+<!--section for team
 <section class="title-team is-info is-fullheight is-bold">
     <h1 class="title" style="font-family:'Anton', sans-serif,font;font-size: 50px;">TEAM</h1>
 
@@ -118,7 +245,9 @@
                     <p class="title">Backend Chaincode Developer &amp; Founder</p>
                     <address>
                         Contact: <a href="biswastiwas@gmail.com">biswastiwas@gmail.com</a>
+                        
                     </address>
+                    
                 </mat-card-content>
             </mat-card>
         </div>
@@ -216,6 +345,7 @@
     </div>
 
 </section>
+-->
 
 
 

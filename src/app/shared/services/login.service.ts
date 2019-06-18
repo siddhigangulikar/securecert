@@ -28,7 +28,8 @@ export class LoginService {
    
     this._http.post("http://localhost:8000/Login", {
      username: body.username,
-      password: body.password
+      password: body.password,
+      role:type+""
      }).subscribe(res => {
       console.log(res);
 if(res=="success"){

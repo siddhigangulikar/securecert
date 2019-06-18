@@ -2,7 +2,8 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { AboutComponent } from './about.component';
 import { RouterModule, Routes } from '@angular/router';
-
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 const routes: Routes = [
   {
     path: '',
@@ -14,7 +15,10 @@ const routes: Routes = [
   declarations: [AboutComponent],
   imports: [
     CommonModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    FormBuilder,
+    FormGroup,
+    HttpClient
   ]
 })
 export class AboutModule { }

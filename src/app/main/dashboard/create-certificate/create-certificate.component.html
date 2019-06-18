@@ -27,11 +27,11 @@
 
           <div class="align">
 
-            Enter PR Number: <input matInput class="form-control" placeholder="Ex: Enter 9-11 digit number"
+            Enter PR Number: <input matInput class="form-control" placeholder="Ex: Enter 5-6 digit number"
               formControlName="cert_PRno"><br>
             Enter Name of the College:
-            <mat-form-field >
-              <select matNativeControl required  class="form-control" style="background-color: white" formControlName="cert_CName">
+            <mat-form-field>
+              <select matNativeControl required class="form-control" style="background-color: white" formControlName="cert_CName">
                 <option value="me">Mechanical</option>
                 <option value="etc">Electronics and Telecommunication</option>
                 <option value="cs">Computers</option>
@@ -42,8 +42,8 @@
               formControlName="cert_CName"><br>-->
             Enter Seat Number: <input matInput class="form-control" type="text" placeholder="Ex: 101" formControlName="cert_Seatno"><br>
             Enter Examination:
-            <mat-form-field >
-              <select matNativeControl required  class="form-control" style="background-color: white" formControlName="cert_examination">
+            <mat-form-field>
+              <select matNativeControl required class="form-control" style="background-color: white" formControlName="cert_examination">
                 <option value="May/June">May/June</option>
                 <option value="Nov/Dec">Nov/Dec</option>
               </select>
@@ -82,9 +82,21 @@
                 <option value="2030">2030</option>
               </select>
             </mat-form-field>
-             <!--<input matInput class="form-control" type="text" placeholder="Ex: 2019"
+            <!--<input matInput class="form-control" type="text" placeholder="Ex: 2019"
               formControlName="cert_YOP"><br>-->
-            Enter Subject 1: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 1 " formControlName="cert_sububject"><br>
+            Enter Subject 1: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 1 "
+              formControlName="cert_subject"><br>
+            Enter Subject 2: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 2 "
+              formControlName="cert_subject2"><br>
+            Enter Subject 3: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 3 "
+              formControlName="cert_subject3"><br>
+            Enter Subject 4: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 4 "
+              formControlName="cert_subject4"><br>
+            Enter Subject 5: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 5 "
+              formControlName="cert_subject5"><br>
+            Enter Subject 6: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 6 "
+              formControlName="cert_subject6"><br>
+
             <button [disabled]="recordCertForm.invalid" color="primary" mat-stroked-button (click)="recordCert()">Submit
               Records</button>
 
