@@ -4,16 +4,23 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './login.component';
 import { MatFormFieldModule, MatInputModule, MatButtonModule, MatCardModule } from '@angular/material';
 import { ReactiveFormsModule } from '@angular/forms';
+import { EditProfileDetailsComponent } from './edit-profile-details/edit-profile-details.component';
 
 const routes: Routes = [
+
+  {
+    path: 'edit-profile-details',
+    component: EditProfileDetailsComponent,
+  },
   {
     path: '',
     component: LoginComponent,
   }
+
 ];
 
 @NgModule({
-  declarations: [LoginComponent],
+  declarations: [LoginComponent, EditProfileDetailsComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -22,8 +29,8 @@ const routes: Routes = [
     MatInputModule,
     MatButtonModule,
     MatCardModule,
-  
-    
+
+
   ]
 })
 

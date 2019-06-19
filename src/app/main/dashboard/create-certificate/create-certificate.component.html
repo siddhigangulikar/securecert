@@ -15,7 +15,7 @@
 
 <div class="container">
   <div class="header">
-    <h3><br><strong>Create Certificate Form</strong></h3>
+    <h3><br><strong> Certificate Creation Form</strong></h3>
   </div>
 
   <div class="row h-100">
@@ -31,11 +31,12 @@
               formControlName="cert_PRno"><br>
             Enter Name of the College:
             <mat-form-field>
-              <select matNativeControl required class="form-control" style="background-color: white" formControlName="cert_CName">
-                <option value="me">Mechanical</option>
-                <option value="etc">Electronics and Telecommunication</option>
-                <option value="cs">Computers</option>
-                <option value="it">Information Technology</option>
+              <select matNativeControl required class="form-control" style="background-color: white" 
+              formControlName="cert_CName">
+                <option value="PCCE">Padre Coensao College Of Engineering</option>
+                <option value="DBSC">DonBosco College Of Engineering</option>
+                <option value="GEC">Goa College Of Engineering</option>
+                <option value="RIT">Raishwar COllege Of Engineering</option>
               </select>
             </mat-form-field>
             <!--<input matInput class="form-control" type="text" placeholder="Ex: PCCE"
@@ -97,8 +98,8 @@
             Enter Subject 6: <input matInput class="form-control" type="text" placeholder="Enter marks obtained in Subject 6 "
               formControlName="cert_subject6"><br>
 
-            <button [disabled]="recordCertForm.invalid" color="primary" mat-stroked-button (click)="recordCert()">Submit
-              Records</button>
+            <button [disabled]="recordCertForm.invalid" color="primary" mat-stroked-button (click)="recordCert()">Create
+              Certificate</button>
 
 
           </div>
@@ -112,7 +113,7 @@
 
 <div class="container1">
   <div class="header">
-    <h3><br><strong>Transfer Certificate</strong></h3>
+    <h3><br><strong>Transfer Certificate Form</strong></h3>
   </div>
   <div class="row h-100">
     <div class="col">
@@ -124,7 +125,7 @@
 
             <div class="align">
               Enter Seat Number: <input matInput class="form-control" placeholder="Enter seat number." formControlName="cert_Seatno">
-              Enter Student Name: <input matInput class="form-control" placeholder="Ex: Amogh" formControlName="firstName"><br><br>
+              Enter Student Name: <input matInput class="form-control" placeholder="Please Enter Full Name." formControlName="firstName"><br><br>
               <button [disabled]="transferCertForm.invalid" color="primary" mat-stroked-button (click)="transferCert()">Transfer
                 Certificate</button>
             </div>

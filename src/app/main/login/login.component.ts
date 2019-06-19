@@ -20,17 +20,11 @@ export class LoginComponent implements OnInit {
   ) {
     this.activatedRoute.queryParams.subscribe(params => {
       if (params.type == "university") {
-        LoginService.type=0;
-        LoginService.loggedIn=true;
         this.type = "University";
       } else if (params.type == "creator") {
-        LoginService.type=1;
-        LoginService.loggedIn=true;
         this.type = "Creator";
       }
       else {
-        LoginService.type=2;
-        LoginService.loggedIn=true;
         this.type = "Student";
       }
     })
@@ -45,22 +39,19 @@ export class LoginComponent implements OnInit {
     this.loginForm = this.formBuilder.group({
       username: [null, [Validators.required]],
       password: [null, [Validators.required, Validators.minLength(4)]],
-      
+
     });
   }
 
   loginClicked() {
     let data = 0;
-    if(this.type=="Creator")
-    {
-      data=1;
-
+    if (this.type == "Creator") {
+      data = 1;
     }
-    else if(this.type=="Student")
-    {
-      data=2;
+    else if (this.type == "Student") {
+      data = 2;
     }
-    this._loginService.login(this.loginForm.value,data);
+    this._loginService.login(this.loginForm.value, data + "");
   }
 }
 

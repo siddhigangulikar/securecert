@@ -4,25 +4,17 @@ import { RouterModule, Routes } from '@angular/router';
 import { HomeComponent } from './home.component';
 import {MatIconModule} from '@angular/material/icon';
 
-import { MatCardModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatDialogModule, MatMenuModule, MatNavList, MatListModule, MatToolbarModule } from '@angular/material';
-import { CertVerifierComponent } from './cert-verifier/cert-verifier.component';
-// import {TopnavComponent} from '../topnav/topnav.component';
+import { MatCardModule, MatFormFieldModule, MatSelectModule, MatOptionModule, MatDialogModule, MatMenuModule, MatNavList, MatListModule, MatToolbarModule, MatButtonModule } from '@angular/material';
+import { ReactiveFormsModule } from '@angular/forms';
+
 const routes: Routes = [
   {
     path: '',
-    component: HomeComponent,
-    children:[
-      {
-        path:'cert-Verifier',
-        component:CertVerifierComponent,
-      }
-    ]
-    
+    component: HomeComponent
   }
 ];
-
 @NgModule({
-  declarations: [HomeComponent, CertVerifierComponent],
+  declarations: [HomeComponent],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
@@ -34,7 +26,10 @@ const routes: Routes = [
     MatMenuModule,
     MatListModule,
     MatToolbarModule,
+    MatButtonModule,
+    ReactiveFormsModule,
     MatIconModule,
+  
    
     
    

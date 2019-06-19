@@ -95,21 +95,23 @@ export class CreateCertificateComponent implements OnInit {
       },
         error => {
           alert("success");
-
+this.recordCertForm.reset();
         });
-    //this.recordCertForm.reset();
+    
   }
 
   transferCert() {
 
     this.httpClient.post(`http://localhost:8000/transfer_cert/${this.transferCertForm.get('cert_Seatno').value}/transferName`,
       this.transferCertForm.value).subscribe(res => {
-        alert("success");
         console.log(res);
-        //this.recordCertForm.reset();
+        alert("success");
+        this.transferCertForm.reset();
       },
         error => {
           alert("Error");
         });
+       // this.transferCertForm.reset();
+
   }
 }

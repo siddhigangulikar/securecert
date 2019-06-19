@@ -4,10 +4,12 @@ import { MainComponent } from './main.component';
 import { RouterModule, Routes } from '@angular/router';
 import { TopnavComponent } from './topnav/topnav.component';
 
-import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule, MatButtonModule, MatFormFieldModule, MatSelectModule } from '@angular/material';
+import { MatIconModule, MatToolbarModule, MatMenuModule, MatListModule, MatButtonModule, MatFormFieldModule, MatSelectModule, MatCardModule } from '@angular/material';
 // import { HomeComponent } from './home/home.component';
 // import { LandingComponent } from './dashboard/landing/landing.component';
 import {HomeModule} from './home/home.module';
+import { CertVerifierComponent } from './cert-verifier/cert-verifier.component';
+import { ReactiveFormsModule } from '@angular/forms';
 
 
 const routes: Routes = [
@@ -16,8 +18,8 @@ const routes: Routes = [
     component: MainComponent,
     children: [
       {
-        path: '',
-        loadChildren: './home/home.module#HomeModule'
+        path: 'certificate-verfication',
+        component: CertVerifierComponent
       },
       {
         path: 'login',
@@ -30,6 +32,10 @@ const routes: Routes = [
       {
         path: 'dashboard',
         loadChildren: './dashboard/dashboard.module#DashboardModule'
+      },
+      {
+        path: '',
+        loadChildren: './home/home.module#HomeModule'
       }
     ]
   }
@@ -39,6 +45,7 @@ const routes: Routes = [
   declarations: [
     MainComponent,
     TopnavComponent,
+    CertVerifierComponent
     
     ],
 
@@ -47,6 +54,8 @@ const routes: Routes = [
     CommonModule,
     RouterModule.forChild(routes),
     MatIconModule,
+    ReactiveFormsModule,
+    MatCardModule,
     MatToolbarModule,
     MatMenuModule,
     MatListModule,

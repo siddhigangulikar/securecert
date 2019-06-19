@@ -7,13 +7,22 @@ import { LoginService } from 'src/app/shared/services/login.service';
   styleUrls: ['./topnav.component.scss']
 })
 export class TopnavComponent implements OnInit {
+  isLoggedIn: boolean;
+  constructor(
+    private _loginService: LoginService
 
-  isLoggedIn:Boolean;
-  constructor() { }
+  ) { }
 
   ngOnInit() {
-    this.isLoggedIn=LoginService.loggedIn;
-    console.log("Logged in? ", LoginService.loggedIn)
+    this._loginService.isLoggedIn.subscribe(data => this.isLoggedIn = data);
   }
 
+  logout() {
+    this._loginService.logout();
+  }
+
+  scroll(el: string) {
+    const element = document.getElementById(el);
+    element.scrollIntoView();
+  }
 }

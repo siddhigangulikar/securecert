@@ -11,18 +11,14 @@ import { Router } from '@angular/router';
 })
 export class LandingComponent implements OnInit {
 
-  constructor(private router: Router) { }
-  type:Number
+  constructor(
+    private router: Router,
+    private _loginService: LoginService
+  ) { }
+
+  public type: string = localStorage.getItem('type');
 
   ngOnInit() {
-    this.type= LoginService.type;
-    console.log("This page is", this.type)
-  }
-
-
-  Logout(){
-    console.log("Logout!!!!!!!!")
-    this.router.navigate(['/'])
   }
 
 }

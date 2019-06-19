@@ -54,10 +54,11 @@ export class EnrollStudentComponent implements OnInit {
   */  
      this.httpClient.post(`http://localhost:8000/addNewStudent`, this.enrollStudentForm.value).subscribe((data:any)=>
      {console.log(data);
-    //this.enrollStudentForm.reset()
+     
   })
      
-
+  alert("Success");
+  this.enrollStudentForm.reset()
    //  this.enrollStudentForm.reset();
 
   }
