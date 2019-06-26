@@ -254,7 +254,9 @@
     margin: 0 0 7px 0;
     transition: all 0.6s ease 0s;
 }
-.our-team:hover .title{ color: #fff; }
+
+
+.our-team:hover .address{ color: #fff; }
 .our-team .post{
     display: block;
     font-size: 17px;
@@ -263,7 +265,18 @@
     text-transform: capitalize;
     transition: all 0.6s ease 0s;
 }
-.our-team:hover .post{ color: #ffcc00; }
+
+.our-team:hover a{ color: #fff; }
+.our-team .post{
+    display: block;
+    font-size: 17px;
+    font-weight: 500;
+    color: #707070;
+    text-transform: capitalize;
+    transition: all 0.6s ease 0s;
+}
+
+.our-team:hover .post{ color: #eb190a; }
 .our-team .social{
     width: 100%;
     padding: 0;
@@ -298,9 +311,17 @@
 
 .main{
 	align-content: center;
-	margin-left: 325px;
+	margin-left: 30px;
 }
 
 .position-absolute {
 	top: 0;
+}
+
+.h5{
+	font-size: 30px;
+}
+
+p{
+	font-size: 20px;
 }

@@ -30,7 +30,7 @@ export class EditProfileDetailsComponent implements OnInit {
   forgotPassword() {
     console.log(this.forgotPasswordForm.value)
 
-    this.httpClient.post(`http://localhost:8000/forgotpassword`,
+    this.httpClient.post(`http://localhost:8000/get_password`,
       this.forgotPasswordForm.value).subscribe(res => {
         alert("error");
         console.log(res);

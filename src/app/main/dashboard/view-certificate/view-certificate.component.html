@@ -3,16 +3,34 @@
   <h5 style="color:red;margin-bottom:2%" id="error_query"></h5>
 
 
-  <form [formGroup]="queryCertForm">
-
-    <div class="main">
-      <label for="query"><strong>Enter Seat Number:</strong></label>
-      <input class="form-control" type="text" placeholder="Enter The Seat Number,Please." name="query" formControlName="seatNo"><br>
-      <button (click)="queryCert()">View Certificate</button>
-    </div>
-  </form>
 
 </div>
+
+
+<table id="all_cert" class="table">
+  <tr>
+    <th>PR number</th>
+    <th>Student Name</th>
+    <th>College Name</th>
+    <th>Seat number </th>
+    <th>Examination</th>
+    <th>Year of Passing</th>
+   
+
+  </tr>
+  <tr *ngFor="let cert of all_cert">
+
+    <td>{{cert.prNo}}</td>
+    <td>{{cert.studentName}}</td>
+    <td>{{cert.collegeName}}</td>
+    <button (click)="queryCert(cert.seatNo)">{{cert.seatNo}}</button>
+    <td>{{cert.examination}}</td>
+    <td>{{cert.yearOfPassing}}</td>
+   
+  </tr>
+</table>
+
+<!--
 <table class="table">
   <tr>
     <th>PR number</th>
@@ -45,6 +63,7 @@
     <td>{{sub6}}</td>
   </tr>
 </table>
+-->
 
 <br><br>
 
@@ -53,19 +72,19 @@
     <h5><strong> GOA UNIVERSITY</strong></h5>
     <mat-card class="card">
       <img mat-card-image src="../assets/gu1.jpg">
-  </mat-card>
+    </mat-card>
   </div><br>
 
   <div class="first">
-    <h6><strong>  Seat Number: <label>{{Newcertificate.seatNo}}</label>
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    PR NO: <label>{{Newcertificate.prNo}}</label><br><br>
-    College Name: <label>{{Newcertificate.collegeName}}</label><br><br>
-    Certificate showing the marks/grades obtained by
-    Shri/Kum.: <label>{{Newcertificate.studentName}}</label><br><br>
-    Examination held in: <label>{{Newcertificate.examination}}</label><br><br>
-    Year Of Passing: <label>{{Newcertificate.yearOfPassing}}</label><br><br>
-  </strong></h6>
+    <h6><strong> Seat Number:</strong> <label>{{Newcertificate.seatNo}}</label>
+      &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <strong> PR NO:</strong> <label>{{Newcertificate.prNo}}</label><br><br>
+      <strong> College Name:</strong> <label>{{Newcertificate.collegeName}}</label><br><br>
+      <strong> Certificate showing the marks/grades obtained by
+        Shri/Kum.:</strong> <label>{{Newcertificate.studentName}}</label><br><br>
+      <strong> Examination held in:</strong> <label>{{Newcertificate.examination}}</label><br><br>
+      <strong> Year Of Passing:</strong> <label>{{Newcertificate.yearOfPassing}}</label><br><br>
+    </h6>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 
     <strong>
@@ -100,7 +119,8 @@
     &nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub1}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub1}}</label></td>
   </tr>
   <br><br>
   <tr>
@@ -114,7 +134,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub2}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub2}}</label></td>
   </tr>
   <br><br>
   <tr>
@@ -128,7 +149,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub3}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub3}}</label></td>
   </tr>
   <br><br>
   <tr>
@@ -142,7 +164,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub4}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub4}}</label></td>
   </tr>
   <br><br>
   <tr>
@@ -156,7 +179,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub5}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub5}}</label></td>
   </tr>
   <br><br>
   <tr>
@@ -170,7 +194,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>100</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label>{{sub6}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{sub6}}</label></td>
   </tr>
 
 
@@ -192,7 +217,8 @@
     &nbsp;&nbsp;&nbsp;
     <td>600</td>
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-    <td><label> &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{total}}</label></td>
+    <td><label>
+        &#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;&#160;{{total}}</label></td>
   </tr>
   <strong>
     <hr></strong>

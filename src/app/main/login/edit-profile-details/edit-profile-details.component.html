@@ -1,23 +1,23 @@
+<section class="d-flex align-items-center justify-content-center">
+  <div class="container">
+    <div class="row justify-content-end mt-5">
+      <div class="col-md-8 col-lg-6 col-xl-4">
+        <div class="card">
+          <div class="card-body">
+            <form [formGroup]="forgotPasswordForm">
+              <mat-card-title class="align-items-center">Forgot Password</mat-card-title>
+              <br><br><br>
+              <mat-form-field class="w-100">
+                <input matInput placeholder="Enter PR Number" formControlName="prNumber">
+              </mat-form-field>
 
+              <button [disabled]="forgotPasswordForm.invalid" color="primary" mat-stroked-button (click)="forgotPassword()">Submit</button>
+              <br>
 
-<div class="container1">
-    <div class="header">
-      <h3><br><strong>FORGOT PASSWORD</strong></h3>
-    </div>
-    
-  
-        <div class="mat-form-field">
-          <form [formGroup]="forgotPasswordForm">
-            <div class="form-group">
-  
-              <div class="align">
-                Enter PR Number: <input matInput class="form-control" placeholder="Enter pr number." formControlName="prNumber">
-               
-                <button [disabled]="forgotPasswordForm.invalid" color="primary" mat-stroked-button (click)="forgotPassword()">Submit</button>
-              </div>
-            </div>
-          </form>
+            </form>
+          </div>
         </div>
-  
-      
+      </div>
+    </div>
   </div>
+</section>

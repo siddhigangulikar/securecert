@@ -32,6 +32,7 @@ export class LoginService {
         this.isLoggedIn.next(true);
         localStorage.setItem("type", type);
         localStorage.setItem("token", type);
+        localStorage.setItem("username",body.username);
         this.router.navigate(["dashboard"]);
       } else {
         this.isLoggedIn.next(false);
