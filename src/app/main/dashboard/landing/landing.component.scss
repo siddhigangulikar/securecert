@@ -3,6 +3,13 @@
    font-size: 35px;
     
 }
+
+.body{
+    background-image: url("blur.jpg");
+    background-attachment: fixed;
+    background-size: cover;
+}
+
 .data{
     text-align: left;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
@@ -27,4 +34,5 @@ h4{
 
 .pic{
     margin-left: 200px;
+    
 }

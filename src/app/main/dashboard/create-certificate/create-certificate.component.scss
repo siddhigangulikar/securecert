@@ -32,10 +32,10 @@
   margin-bottom: 50px;
 }
 
-  .row
+.row
 {
     display: table;
-    width: 80%; /*Optional*/
+    width: 100%; /*Optional*/
     border-spacing: 20px; /*Optional*/
 }
 .column
@@ -61,4 +61,28 @@
     background-color:green;
     color: white;
     font-size: 22px;
+}
+
+.form-control{
+  border-radius: 25px;
+  border: 1.3px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 1000px;
+  height: 60px; 
+}
+
+.form-control1{
+  border-radius: 25px;
+  border: 1.3px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 500px;
+  height: 60px; 
+}
+
+.form-control2{
+  border-radius: 25px;
+  border: 1.3px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 300px;
+  height: 60px; 
 }

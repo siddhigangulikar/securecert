@@ -74,7 +74,7 @@ font-size: 40px;
 // width: 100%;
 background-color:rgb(223, 229, 250);
 box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.281);
-border: 1px solid;
+border: 1.5px solid;
 margin-top: 5%;
 margin-bottom: 5%;
 
@@ -100,10 +100,7 @@ margin-bottom: 5%;
 }
 
   
-  .align{
-    // margin-left: 25px;
-    text-align: left;
-  }
+  
 
   .button {
     padding: 7px 10px;
@@ -115,4 +112,29 @@ margin-bottom: 5%;
     background-color:green;
     color: white;
     font-size: 22px;
+}
+
+.form-control{
+  border-radius: 25px;
+  border: 1.3px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 320px;
+  height: 68px; 
+}
+
+
+.form-control1{
+  border-radius: 25px;
+  border: 1.3px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 880px;
+  height: 60px; 
+}
+
+.form-control2{
+  border-radius: 25px;
+  border: 1.4px solid rgb(87, 87, 150);
+  padding: 20px; 
+  width: 500px;
+  height: 60px; 
 }
