@@ -10,17 +10,19 @@ import { Certificate } from '../../../shared/models';
 export class ViewCertificateComponent implements OnInit {
 
 
-  public queryCertForm:FormGroup;
-  public seatNo:any;
-  public Newcertificate: Certificate = new Certificate({});
-  public sub1:any;
-  public sub2:any;
-  public sub3:any;
-  public sub4:any;
-  public sub5:any
-  public sub6:any;
-  public total:number;
+//public queryCertForm:FormGroup;
+public seatNo:any;
+public Newcertificate: Certificate = new Certificate({});
+public all_cert: Certificate[] = [];
 
+public sub1:any;
+public sub2:any;
+public sub3:any;
+public sub4:any;
+public sub5:any
+public sub6:any;
+public total:number;
+public username=localStorage.getItem('username')
 
 
 
@@ -30,18 +32,28 @@ export class ViewCertificateComponent implements OnInit {
   ) { }
 
   ngOnInit() {
-
-    this.queryCertForm=this._fb.group({
+this.queryStudentCert();
+    /*this.queryCertForm=this._fb.group({
       seatNo:null
-    })
+    })*/
   }
+  queryStudentCert() {
+    console.log(this.username);
+    this.httpClient.get(`http://localhost:8000/getStudentCert/${this.username}`).subscribe(res => {
+     
+      console.log(res);
+     // this.all_cert = res.map(cert => new Certificate(cert));
+     this.all_cert = res.map(cert => new Certificate(cert));
+      // this.Newcertificate.sub.split('"')
+  
+  });
+    }
 
-
-  queryCert() {
+  queryCert(sNo :any) {
  
 
 
-      this.httpClient.get(`http://localhost:8000/get_cert/${this.queryCertForm.get('seatNo').value}`, this.queryCertForm.value).subscribe(res => {
+      this.httpClient.get(`http://localhost:8000/get_cert/${sNo}`).subscribe(res => {
         this.Newcertificate = new Certificate(res);
            console.log(this.Newcertificate.sub)
            console.log( this.Newcertificate.sub.split('"'));
